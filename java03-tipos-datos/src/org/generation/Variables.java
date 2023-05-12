@@ -48,6 +48,8 @@ public class Variables {
 		 * 			> char
 		 */
 		
+		// Datos primitivos que solo guardan numeros enteros
+		
 		// El tipo byte equivale a 8 bits, y almacena datos numericos enteros
 		// 2^8 = 256, se pueden almacenar 256 digitos en byte (max 127 y min -127)
 			byte myVarByte = 12;
@@ -83,7 +85,7 @@ public class Variables {
 		System.out.println("Long, Max Value: " + Long.MAX_VALUE);
 		System.out.println("Long, Min Value: " + Long.MIN_VALUE);
 		
-		// Las literales numericas enteras son de tipo int por default
+		// IMPORTANT: Las literales numericas enteras son de tipo int por default
 		// ejemplo de literal numerica (123434) 
 		// Para indicar una literal numerica de tipo long, hay que indicar
 		// la literal con la letra l o L al final.
@@ -91,10 +93,11 @@ public class Variables {
 			System.out.println("Long: " + myLiteralLong);
 			
 		// ------------------------------------------------------------
+		// Datos primitivos que solo guardan numeros de punto flotante
 		
 		// El tipo float equivale a 32 bits, almacena datos numericos de punto flotante (real)
 		// 2^32
-		// Las literales numericas de punto flotante son de tipo double por default
+		// IMPORTANT: Las literales numericas de punto flotante son de tipo double por default
 		// Para indicar una literal numerica de tipo float, hay que indicar
 		// la literal con la letra f o F
 		float myVarFloat = 1500.6523F;
@@ -109,7 +112,40 @@ public class Variables {
 		System.out.println("Double, Max Value: " + Double.MAX_VALUE);
 		System.out.println("Double, Min Value: " + Double.MIN_VALUE);
 		
-		
+		// --------------------------------------------------------
+		// El tipo boolean solo almacena valores true o false
+		 boolean myVarBoolean = true;
+		 System.out.println("Valor Boolean: " + myVarBoolean);
+		// El tipo char solo almacena un caracter, se debe definir la literal
+		// entre apostrofes simples ej. 'a' no dobles "" (los dobles "" son para String).
+		// Solo almacena caracteres de la tabla unicode (16 bits)
+		// puede almacenar del 0 al 65535 digitos.
+		 char losPandillerosDeLaTarde = 'I';
+		 System.out.println("char: " + losPandillerosDeLaTarde);
+		// Podemos definir un char por su código UNICODE o su valor numerico
+		 char letraL = '\u004C'; // Esta es la forma de definir un caracter UNICODE
+		 System.out.println("La letra L: " + letraL);
+		 	
+		 char letraM = 77; // Esta es la forma de definir un caracter con su valor numerico
+		 System.out.println("La letra M: " + letraM);
+		 	
+		 // ----------------------------------------------------------
+		 // Formas de representar un numero
+		 // Representación decimal
+		 System.out.println("Representacion decimal: " + 26);
+		 // Representacion hexadecimal
+		 System.out.println("Representacion hexadecimal: " + 0x1a);
+		 // Representacion binaria
+		 System.out.println("Representacion binaria: " + 0b11010);
+		 // Para las literales numericas se puede usar el guion bajo (_) para separar numeros y
+		 // esto es para distinguir decenas, centenas, etc.
+		 // Pero no se puede poner _ al inicio o al final del numero o literal
+		 // No se puede escribir _ junto a un punto decimal
+		 // No se puede escribir _ antes de la F o L de (float y long)
+		 
+		 int numeroSeparados = 12_345; // es valido
+		 float numerosFloatSeparados = 12_345.456_346F; // es valido
+		 
 	}
 
 }
